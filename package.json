@@ -1,0 +1,24 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "Book store app, where user can add books, edit and show the list of books",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run generateDoc && node --env-file=.env --watch src/index.js",
+    "dev": "npm run generateDoc && nodemon --env-file=.env src/index.js",
+    "generateDoc": "node --env-file=.env src/swagger.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.1",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
